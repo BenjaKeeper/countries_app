@@ -1,6 +1,6 @@
-import 'package:injectable/injectable.dart';
+import 'package:countries_app/core/config/environment.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
-import '../config/environment.dart';
+import 'package:injectable/injectable.dart';
 
 @module
 abstract class GraphQLModule {
