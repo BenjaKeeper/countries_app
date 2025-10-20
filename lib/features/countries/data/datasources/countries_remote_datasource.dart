@@ -20,14 +20,7 @@ class CountriesRemoteDataSource {
         name
         emoji
         capital
-        currency
-        phone
         continent {
-          code
-          name
-        }
-        languages {
-          code
           name
         }
       }

@@ -15,7 +15,7 @@ abstract class CountryModel with _$CountryModel {
     required String name,
     required String emoji,
     required ContinentModel continent,
-    required List<LanguageModel> languages,
+    List<LanguageModel>? languages,
     String? capital,
     String? currency,
     String? phone,
@@ -33,7 +33,7 @@ abstract class CountryModel with _$CountryModel {
       currency: currency,
       phone: phone,
       continent: continent.toEntity(),
-      languages: languages.map((l) => l.toEntity()).toList(),
+      languages: languages?.map((l) => l.toEntity()).toList(),
     );
   }
 }
