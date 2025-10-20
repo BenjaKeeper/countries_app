@@ -8,10 +8,8 @@ part 'continent_model.g.dart';
 abstract class ContinentModel with _$ContinentModel {
   const ContinentModel._();
 
-  const factory ContinentModel({
-    required String code,
-    required String name,
-  }) = _ContinentModel;
+  const factory ContinentModel({required String name, String? code}) =
+      _ContinentModel;
 
   factory ContinentModel.fromJson(Map<String, dynamic> json) =>
       _$ContinentModelFromJson(json);

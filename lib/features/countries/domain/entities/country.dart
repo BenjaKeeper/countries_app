@@ -11,7 +11,7 @@ abstract class Country with _$Country {
     required String name,
     required String emoji,
     required Continent continent,
-    required List<Language> languages,
+    List<Language>? languages,
     String? capital,
     String? currency,
     String? phone,

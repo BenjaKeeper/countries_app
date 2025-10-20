@@ -278,7 +278,7 @@ class CountryDetailsScreen extends ConsumerWidget {
                             const SizedBox(height: 16),
                             _LanguagesList(
                               countryCode: countryCode,
-                              languages: country.languages,
+                              languages: country.languages ?? [],
                             ),
                           ],
                         ),
