@@ -1,9 +1,8 @@
+import 'package:countries_app/config/router/app_router.dart';
+import 'package:countries_app/config/theme/app_theme.dart';
+import 'package:countries_app/core/di/injection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import 'config/router/app_router.dart';
-import 'config/theme/app_theme.dart';
-import 'core/di/injection.dart';
 
 void main() {
   // Initialize dependency injection
