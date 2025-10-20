@@ -22,6 +22,7 @@ void main() {
   group('GetAllCountries', () {
     final tCountries = [
       const Country(
+        main
         code: 'US',
         name: 'United States',
         emoji: '🇺🇸',
