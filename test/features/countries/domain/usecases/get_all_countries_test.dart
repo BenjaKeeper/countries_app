@@ -21,36 +21,34 @@ void main() {
 
   group('GetAllCountries', () {
     final tCountries = [
-      Country(
+      const Country(
+        main
         code: 'US',
         name: 'United States',
         emoji: '🇺🇸',
         capital: 'Washington D.C.',
         currency: 'USD',
         phone: '+1',
-        continent: const Continent(code: 'NA', name: 'North America'),
-        languages: const [
-          Language(code: 'en', name: 'English'),
-        ],
+        continent: Continent(code: 'NA', name: 'North America'),
+        languages: [Language(code: 'en', name: 'English')],
       ),
-      Country(
+      const Country(
         code: 'MX',
         name: 'Mexico',
         emoji: '🇲🇽',
         capital: 'Mexico City',
         currency: 'MXN',
         phone: '+52',
-        continent: const Continent(code: 'NA', name: 'North America'),
-        languages: const [
-          Language(code: 'es', name: 'Spanish'),
-        ],
+        continent: Continent(code: 'NA', name: 'North America'),
+        languages: [Language(code: 'es', name: 'Spanish')],
       ),
     ];
 
     test('should return list of countries from repository', () async {
       // Arrange
-      when(() => mockRepository.getAllCountries())
-          .thenAnswer((_) async => Right(tCountries));
+      when(
+        () => mockRepository.getAllCountries(),
+      ).thenAnswer((_) async => Right(tCountries));
 
       // Act
       final result = await useCase();
@@ -64,8 +62,9 @@ void main() {
     test('should return ServerFailure when repository fails', () async {
       // Arrange
       const tFailure = Failure.server('Server error');
-      when(() => mockRepository.getAllCountries())
-          .thenAnswer((_) async => const Left(tFailure));
+      when(
+        () => mockRepository.getAllCountries(),
+      ).thenAnswer((_) async => const Left(tFailure));
 
       // Act
       final result = await useCase();
@@ -79,8 +78,9 @@ void main() {
     test('should return NetworkFailure when there is no network', () async {
       // Arrange
       const tFailure = Failure.network();
-      when(() => mockRepository.getAllCountries())
-          .thenAnswer((_) async => const Left(tFailure));
+      when(
+        () => mockRepository.getAllCountries(),
+      ).thenAnswer((_) async => const Left(tFailure));
 
       // Act
       final result = await useCase();

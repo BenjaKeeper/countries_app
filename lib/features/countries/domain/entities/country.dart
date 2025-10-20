@@ -1,6 +1,6 @@
+import 'package:countries_app/features/countries/domain/entities/continent.dart';
+import 'package:countries_app/features/countries/domain/entities/language.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'continent.dart';
-import 'language.dart';
 
 part 'country.freezed.dart';
 

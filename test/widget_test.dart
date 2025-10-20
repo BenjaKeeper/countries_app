@@ -3,6 +3,8 @@
 // Note: Full integration tests are available in integration_test/app_test.dart
 // This file contains basic tests that don't require full app initialization
 
+import 'package:countries_app/main.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

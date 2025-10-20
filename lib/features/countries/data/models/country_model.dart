@@ -14,11 +14,11 @@ abstract class CountryModel with _$CountryModel {
     required String code,
     required String name,
     required String emoji,
+    required ContinentModel continent,
+    required List<LanguageModel> languages,
     String? capital,
     String? currency,
     String? phone,
-    required ContinentModel continent,
-    required List<LanguageModel> languages,
   }) = _CountryModel;
 
   factory CountryModel.fromJson(Map<String, dynamic> json) =>

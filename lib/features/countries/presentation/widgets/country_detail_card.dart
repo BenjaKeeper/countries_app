@@ -6,10 +6,10 @@ class CountryDetailCard extends StatelessWidget {
   final String value;
 
   const CountryDetailCard({
-    super.key,
     required this.icon,
     required this.title,
     required this.value,
+    super.key,
   });
 
   @override
@@ -65,11 +65,7 @@ class CountryDetailCard extends StatelessWidget {
                   ),
                 ],
               ),
-              child: Icon(
-                icon,
-                color: colorScheme.primary,
-                size: 24,
-              ),
+              child: Icon(icon, color: colorScheme.primary, size: 24),
             ),
             const SizedBox(width: 16),
 
